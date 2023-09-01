@@ -7,7 +7,7 @@ const port = process.env.PORT || 5000;
 
 
 
-// midleware 
+
 
 app.use(cors());
 app.use(express.json());
@@ -39,7 +39,7 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    // Connect the client to the server	(optional starting in v4.7)
+    
     await client.connect();
     const productCollection = client.db('productDB').collection('productItm');
     const sectorsCollection = client.db('taskdb').collection('worktyp');
